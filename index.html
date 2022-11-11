@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Fetch</title>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center mt-5 mb-4 ">Search Movies</h2>
+    <form class="search-form align-items-center mb-3 d-md-flex" method="post">
+        <input class="search-input form-control mb-2 mb-md-0 me-md-2" type="search" placeholder="Search movies...">
+        <select class="type-select form-select mb-2 mb-md-0 me-md-2">
+            <option hidden value="">Types</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+            <option value="episode">Episode</option>
+        </select>
+        <input class="year-input form-control mb-2 mb-md-0 me-md-2" type="number">
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <ul class="movies-collection"></ul>
+</div>
+
+
+<template class="movie-temp">
+    <div class="movies-item d-flex flex-column justify-content-between">
+        <div>
+            <img class="movie-img mb-3 rounded-2" width="250" height="250" src="" alt="">
+            <h2 class="movie-title"></h2>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <strong class="year-title">Year: </strong>
+                    <p class="movie-year mb-0"></p>
+                </div>
+                <div class="category-wrap d-flex align-items-center">
+                    <strong class="category-title">Type:</strong>
+                    <p class="category mb-0"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script src="main.js"></script>
+</body>
+</html>
